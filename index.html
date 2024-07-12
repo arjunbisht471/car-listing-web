@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car-Listing-Website</title>
+  <link rel="stylesheet" href="css/all-styles.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light p-3">
+    <div class="container">
+      <div class="logo d-flex align-items-center">
+        <img src="assets/icons/logo.png" alt="" width="80px" height="40px">
+        <a href="#" class="mt-0 text-dark fw-bolder fs-5">Car <span class="text-warning">Listing .</span></a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">New Cars</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Used Cars</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownModels" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Models
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownModels" style="padding: 10px;">
+              <li><a class="dropdown-item" href="#">SUVs</a></li>
+              <li><a class="dropdown-item" href="#">Sedans</a></li>
+              <li><a class="dropdown-item" href="#">Hatchbacks</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">View All Models</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-outline text-white rounded fw-bold ms-3" style="background-color: #FF9900;" href="#"
+              tabindex="-1" aria-disabled="true">Sell Your Car</a>
+          </li>
+        </ul>
+        <div class="search-btn" id="search-btn">
+          <i class="fas fa-search fs-4 ms-2"></i>
+        </div>
+
+      </div>
+  </nav>
+  <div id="search-box" class="hidden">
+    <input type="text" placeholder="Enter Car Name">
+    <i class="fas fa-search"></i>
+  </div>
+
+  <main>
+    <div class="container-fluid">
+      <div class="row" id="banner-page">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="assets/img/yellow-car-gas-station.jpg" alt="" width="100%" height="100%" loading="lazy">
+              <div class="overlay">
+                <div class="text">
+                  <h2>Explore the Open Road</h2>
+                  <p>Discover new adventures with our luxury cars.</p>
+                  <button id="overlay-btn">Learn More</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide ">
+              <img src="assets/img/pretty-woman-hat.jpg" alt="" width="100%" height="100%" loading="lazy">
+              <div class="overlay">
+                <div class="text">
+                  <h2>Refuel with Style</h2>
+                  <p>Enjoy the convenience of our modern fleet.</p>
+                  <button id="overlay-btn">Explore Now</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide ">
+              <img src="assets/img/luxurious-car-parked-highway-with-illuminated-headlight-sunset.jpg" alt=""
+                width="100%" height="100%" loading="lazy">
+              <div class="overlay">
+                <div class="text">
+                  <h2>Refuel with Style</h2>
+                  <p>Enjoy the convenience of our modern fleet.</p>
+                  <button id="overlay-btn">Explore Now</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <img src="assets/img/back-shot-white-car.jpg" alt="" width="100%" height="100%" loading="lazy">
+              <div class="overlay">
+                <div class="text">
+                  <h2>Drive in Elegance</h2>
+                  <p>Experience luxury and comfort like never before.</p>
+                  <button id="overlay-btn">Book Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-12 d-flex justify-content-between gap-3 mt-1">
+          <h2>Explore Our Cars</h2>
+          <p class="text-danger"><a href="#">View More</a> <i class="fa-solid fa-arrow-right"></i></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-2 col-md-6 col-sm-12">
+          <div class="card card-top d-flex justify-content-center align-items-center">
+            <div class="image-box">
+              <img src="assets/img/car-1.png" class="card-img-top" alt="..." width="100%" loading="lazy">
+            </div>
+            <div class="card-body">
+              <p class="card-text">Sedan</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2  col-md-6 col-sm-12">
+          <div class="card  card-top d-flex justify-content-center align-items-center">
+            <div class="image-box">
+              <img src="assets/img/car-2.png" class="card-img-top" alt="..." loading="lazy">
+            </div>
+            <div class="card-body">
+              <p class="card-text">Campers</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-12">
+          <div class="card  card-top">
+            <div class="image-box">
+              <img src="assets/img/car-3.png" class="card-img-top" alt="..." loading="lazy">
+            </div>
+            <div class="card-body">
+              <p class="card-text">Cabriolet</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2  col-md-6 col-sm-12">
+          <div class="card  card-top">
+            <div class="image-box">
+              <img src="assets/img/car-4.png" class="card-img-top" alt="..." loading="lazy">
+            </div>
+            <div class="card-body">
+              <p class="card-text">Pickup</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2  col-md-6 col-sm-12">
+          <div class="card  card-top">
+            <div class="image-box">
+              <img src="assets/img/car-5.png" class="card-img-top" alt="..." loading="lazy">
+            </div>
+            <div class="card-body">
+              <p class="card-text">Supercar</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2  col-md-6 col-sm-12">
+          <div class="card  card-top">
+            <div class="image-box">
+              <img src="assets/img/car-6.png" class="card-img-top" alt="..." loading="lazy">
+            </div>
+            <div class="card-body">
+              <p class="card-text">Minivans</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="banner-img">
+            <div class="banner-text-box p-4 text-center">
+              <!-- Top part with flex buttons -->
+              <div class="container mt-5">
+                <div class="row ">
+                  <div class="col-lg-6 mx-auto">
+                    <div class="form-content border p-4">
+                      <div class="row">
+                        <div class="col-lg-4">
+                          <button style="width:100%; background-color: #FF9900;"
+                            class="btn btn-primary shadow-none ">Any</button>
+                        </div>
+                        <div class="col-lg-4">
+                          <button style="width:100%; background-color: #FF9900;"
+                            class="btn btn-primary shadow-none btn-block">New</button>
+                        </div>
+                        <div class="col-lg-4">
+                          <button style="width:100%; background-color: #FF9900;"
+                            class="btn btn-primary shadow-none btn-block">Used</button>
+                        </div>
+                      </div>
+
+                      <form>
+                        <div class="row mt-3">
+                          <div class="col-md-6 mx-auto">
+                            <div class="form-group">
+                              <label for="brands" class="text-dark fw-bold">Brands:</label>
+                              <select class="form-control" id="brands">
+                                <option>Select Brand</option>
+                                <option>BMW</option>
+                                <option>Audi</option>
+                                <option>Jaguar</option>
+                                <option>Scorpio</option>
+                                <option>Ford</option>
+                                <option>Honda City</option>
+                                <!-- Add more options as needed -->
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6 mx-auto">
+                            <div class="form-group">
+                              <label for="model" class="text-dark fw-bold">Model:</label>
+                              <select class="form-control" id="model">
+                                <option>Select Model</option>
+                                <option>Sedans</option>
+                                <option>Pickup</option>
+                                <option>Sports Car</option>
+                                <option>Minivans</option>
+                                <!-- Add more options as needed -->
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6 mx-auto">
+                            <div class="form-group">
+                              <label for="min-price" class="text-dark fw-bold">Min Price:</label>
+                              <select class="form-control" id="min-price">
+                                <option>Select Min Price</option>
+                                <option>10000</option>
+                                <option>20000</option>
+                                <option>30000</option>
+                                <option>40000</option>
+                                <option>50000</option>
+                                <!-- Add more options as needed -->
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6 mx-auto">
+                            <div class="form-group">
+                              <label for="max-price" class="text-dark fw-bold">Max Price:</label>
+                              <select class="form-control" id="max-price">
+                                <option>Select Max Price</option>
+                                <option>500000</option>
+                                <option>1000000</option>
+                                <option>1200000</option>
+                                <option>1500000</option>
+                                <option>2000000</option>
+                                <!-- Add more options as needed -->
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6 mx-auto">
+                            <div class="form-group">
+                              <label for="year-from" class="text-dark fw-bold">Year (from):</label>
+                              <select class="form-control" id="year-from">
+                                <option>Select Year From</option>
+                                <option>2020</option>
+                                <option>2021</option>
+                                <option>2022</option>
+                                <!-- Add more options as needed -->
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-md-6 mx-auto">
+                            <div class="form-group">
+                              <label for="year-to" class="text-dark fw-bold">Year (to):</label>
+                              <select class="form-control" id="year-to">
+                                <option>Select Year To</option>
+                                <option>2022</option>
+                                <option>2023</option>
+                                <option>2024</option>
+                                <!-- Add more options as needed -->
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="col-lg-12 text-center">
+                            <button type="submit" class="btn btn-block"
+                              style="background-color: #FF9900; width:100%; color:white;">Search</button>
+                          </div>
+                        </div>
+                      </form>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="container-fluid custom-container mt-5">
+      <div class="listing-container">
+        <div class="row mt-4">
+          <div class="col-lg-6">
+            <h2>Explore All Vehicles</h2>
+          </div>
+          <div class="col-lg-6 d-flex justify-content-end">
+            <button type="button" class="btn  me-2">All</button>
+            <button type="button" class="btn me-2">New Cars</button>
+            <button type="button" class="btn">Used Cars</button>
+          </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+          <!-- Card 1 -->
+          <div class="col">
+            <div class="card h-100">
+              <img src="assets/img/card-1.jpg" class="card-img-top" alt="Car Image">
+              <div class="cardBody">
+                <div class="d-flex flex-column justify-content-end">
+                  <p class="mt-1 text-danger" style="line-height: 1;">Mini Cooper 3 Similar</p>
+                  <h5 style="line-height: 1.2;">Chevrolet Suburban 2021 mo</h5>
+                  <p class="text-danger">$27,000</p>
+                </div>
+                <div class="description d-flex justify-content-between">
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <img src="assets/icons/gasoline-pump.png" alt="" width="30px" height="30px">
+                    </div>
+                    <div class="ms-2">
+                      <p style="color: #dadada; margin-bottom: 0;">Fuel type</p>
+                      <p class="text-center" style="margin-bottom: 0;">Petrol</p>
+                    </div>
+                  </div>
+
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <img src="assets/icons/speedometer.png" alt="" width="30px" height="30px">
+                    </div>
+                    <div class="ms-2">
+                      <p style="color: #dadada; margin-bottom: 0;">Mileage</p>
+                      <p class="text-center" style="margin-bottom: 0;">90 k.m</p>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <img src="assets/icons/gearbox.png" alt="" width="30px" height="30px">
+                    </div>
+                    <div class="ms-2">
+                      <p style="color: #dadada; margin-bottom: 0;">Transmission</p>
+                      <p class="text-center" style="margin-bottom: 0;">Auto</p>
+                    </div>
+                  </div>
+                </div>
+                <hr style="color:#cbc3c3eb;">
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center btn-group">
+                    <a href="#" class="me-2">View Detail</a><i class="fa-solid fa-arrow-right text-danger"></i>
+                  </div>
+                  <div class="like d-flex justify-content-center align-items-center"><i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="assets/img/card-2.jpg" class="card-img-top" alt="Car Image">
+              <div class="cardBody">
+                <div class="d-flex flex-column justify-content-end">
+                  <p class="mt-1 text-danger" style="line-height: 1;">Mini Cooper 3 Similar</p>
+                  <h5 style="line-height: 1.2;">Chevrolet Suburban 2021 mo</h5>
+                  <p class="text-danger">$27,000</p>
+                </div>
+                <div class="description d-flex justify-content-between">
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <img src="assets/icons/gasoline-pump.png" alt="" width="30px" height="30px">
+                    </div>
+                    <div class="ms-2">
+                      <p style="color: #dadada; margin-bottom: 0;">Fuel type</p>
+                      <p class="text-center" style="margin-bottom: 0;">Petrol</p>
+                    </div>
+                  </div>
+
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <img src="assets/icons/speedometer.png" alt="" width="30px" height="30px">
+                    </div>
+                    <div class="ms-2">
+                      <p style="color: #dadada; margin-bottom: 0;">Mileage</p>
+                      <p class="text-center" style="margin-bottom: 0;">90 k.m</p>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <img src="assets/icons/gearbox.png" alt="" width="30px" height="30px">
+                    </div>
+                    <div class="ms-2">
+                      <p style="color: #dadada; margin-bottom: 0;">Transmission</p>
+                      <p class="text-center" style="margin-bottom: 0;">Auto</p>
+                    </div>
+                  </div>
+                </div>
+                <hr style="color:#cbc3c3eb;">
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center btn-group">
+                    <a href="#" class="me-2">View Detail</a><i class="fa-solid fa-arrow-right text-danger"></i>
+                  </div>
+                  <div class="like d-flex justify-content-center align-items-center"><i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="assets/img/card-3.jpg" class="card-img-top" alt="Car Image">
+              <div class="cardBody">
+                <div class="d-flex flex-column justify-content-end">
+                  <p class="mt-1 text-danger" style="line-height: 1;">Mini Cooper 3 Similar</p>
+                  <h5 style="line-height: 1.2;">Chevrolet Suburban 2021 mo</h5>
+                  <p class="text-danger">$27,000</p>
+                </div>
+                <div class="description d-flex justify-content-between">
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <img src="assets/icons/gasoline-pump.png" alt="" width="30px" height="30px">
+                    </div>
+                    <div class="ms-2">
+                      <p style="color: #dadada; margin-bottom: 0;">Fuel type</p>
+                      <p class="text-center" style="margin-bottom: 0;">Petrol</p>
+                    </div>
+                  </div>
+
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <img src="assets/icons/speedometer.png" alt="" width="30px" height="30px">
+                    </div>
+                    <div class="ms-2">
+                      <p style="color: #dadada; margin-bottom: 0;">Mileage</p>
+                      <p class="text-center" style="margin-bottom: 0;">90 k.m</p>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <img src="assets/icons/gearbox.png" alt="" width="30px" height="30px">
+                    </div>
+                    <div class="ms-2">
+                      <p style="color: #dadada; margin-bottom: 0;">Transmission</p>
+                      <p class="text-center" style="margin-bottom: 0;">Auto</p>
+                    </div>
+                  </div>
+                </div>
+                <hr style="color:#cbc3c3eb;">
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center btn-group">
+                    <a href="#" class="me-2">View Detail</a><i class="fa-solid fa-arrow-right text-danger"></i>
+                  </div>
+                  <div class="like d-flex justify-content-center align-items-center"><i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="assets/img/card-3.jpg" class="card-img-top" alt="Car Image">
+              <div class="cardBody">
+                <div class="d-flex flex-column justify-content-end">
+                  <p class="mt-1 text-danger" style="line-height: 1;">Mini Cooper 3 Similar</p>
+                  <h5 style="line-height: 1.2;">Chevrolet Suburban 2021 mo</h5>
+                  <p class="text-danger">$27,000</p>
+                </div>
+                <div class="description d-flex justify-content-between">
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <img src="assets/icons/gasoline-pump.png" alt="" width="30px" height="30px">
+                    </div>
+                    <div class="ms-2">
+                      <p style="color: #dadada; margin-bottom: 0;">Fuel type</p>
+                      <p class="text-center" style="margin-bottom: 0;">Petrol</p>
+                    </div>
+                  </div>
+
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <img src="assets/icons/speedometer.png" alt="" width="30px" height="30px">
+                    </div>
+                    <div class="ms-2">
+                      <p style="color: #dadada; margin-bottom: 0;">Mileage</p>
+                      <p class="text-center" style="margin-bottom: 0;">90 k.m</p>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <img src="assets/icons/gearbox.png" alt="" width="30px" height="30px">
+                    </div>
+                    <div class="ms-2">
+                      <p style="color: #dadada; margin-bottom: 0;">Transmission</p>
+                      <p class="text-center" style="margin-bottom: 0;">Auto</p>
+                    </div>
+                  </div>
+                </div>
+                <hr style="color:#cbc3c3eb;">
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center btn-group">
+                    <a href="#" class="me-2">View Detail</a><i class="fa-solid fa-arrow-right text-danger"></i>
+                  </div>
+                  <div class="like d-flex justify-content-center align-items-center"><i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="assets/img/card-2.jpg" class="card-img-top" alt="Car Image">
+              <div class="cardBody">
+                <div class="d-flex flex-column justify-content-end">
+                  <p class="mt-1 text-danger" style="line-height: 1;">Mini Cooper 3 Similar</p>
+                  <h5 style="line-height: 1.2;">Chevrolet Suburban 2021 mo</h5>
+                  <p class="text-danger">$27,000</p>
+                </div>
+                <div class="description d-flex justify-content-between">
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <img src="assets/icons/gasoline-pump.png" alt="" width="30px" height="30px">
+                    </div>
+                    <div class="ms-2">
+                      <p style="color: #dadada; margin-bottom: 0;">Fuel type</p>
+                      <p class="text-center" style="margin-bottom: 0;">Petrol</p>
+                    </div>
+                  </div>
+
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <img src="assets/icons/speedometer.png" alt="" width="30px" height="30px">
+                    </div>
+                    <div class="ms-2">
+                      <p style="color: #dadada; margin-bottom: 0;">Mileage</p>
+                      <p class="text-center" style="margin-bottom: 0;">90 k.m</p>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <img src="assets/icons/gearbox.png" alt="" width="30px" height="30px">
+                    </div>
+                    <div class="ms-2">
+                      <p style="color: #dadada; margin-bottom: 0;">Transmission</p>
+                      <p class="text-center" style="margin-bottom: 0;">Auto</p>
+                    </div>
+                  </div>
+                </div>
+                <hr style="color:#cbc3c3eb;">
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center btn-group">
+                    <a href="#" class="me-2">View Detail</a><i class="fa-solid fa-arrow-right text-danger"></i>
+                  </div>
+                  <div class="like d-flex justify-content-center align-items-center"><i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100">
+              <img src="assets/img/card-1.jpg" class="card-img-top" alt="Car Image">
+              <div class="cardBody">
+                <div class="d-flex flex-column justify-content-end">
+                  <p class="mt-1 text-danger" style="line-height: 1;">Mini Cooper 3 Similar</p>
+                  <h5 style="line-height: 1;">Chevrolet Suburban 2021 mo</h5>
+                  <p class="text-danger">$27,000</p>
+                </div>
+                <div class="description d-flex justify-content-between">
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <img src="assets/icons/gasoline-pump.png" alt="" width="30px" height="30px">
+                    </div>
+                    <div class="ms-2">
+                      <p style="color: #dadada; margin-bottom: 0;">Fuel type</p>
+                      <p class="text-center" style="margin-bottom: 0;">Petrol</p>
+                    </div>
+                  </div>
+
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <img src="assets/icons/speedometer.png" alt="" width="30px" height="30px">
+                    </div>
+                    <div class="ms-2">
+                      <p style="color: #dadada; margin-bottom: 0;">Mileage</p>
+                      <p class="text-center" style="margin-bottom: 0;">90 k.m</p>
+                    </div>
+                  </div>
+                  <div class="d-flex align-items-center">
+                    <div>
+                      <img src="assets/icons/gearbox.png" alt="" width="30px" height="30px">
+                    </div>
+                    <div class="ms-2">
+                      <p style="color: #dadada; margin-bottom: 0;">Transmission</p>
+                      <p class="text-center" style="margin-bottom: 0;">Auto</p>
+                    </div>
+                  </div>
+                </div>
+                <hr style="color:#cbc3c3eb;">
+                <div class="mt-auto d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center btn-group">
+                    <a href="#" class="me-2">View Detail</a><i class="fa-solid fa-arrow-right"></i>
+                  </div>
+                  <div class="like d-flex justify-content-center align-items-center"><i class="fa-regular fa-heart"></i>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="d-flex justify-content-center align-items-center mt-3 more-btn">
+          <button>More Listings</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid p-3" style="background-color: #F1F5FD;">
+      <div class="row">
+        <div class="col-lg-10 m-auto mt-5">
+          <h3 class="text-center fs-2 fw-bolder" style="color:#FF9900;">Categories</h3>
+          <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto reiciendis labore
+            repellat deleniti alias laboriosam qui, </p>
+          <div class="row">
+            <div class="col-lg-2 col-md-6 col-sm-12 mt-4">
+              <div class="card logo-card  d-flex justify-content-center align-items-center">
+                <div class="logo-box">
+                  <img src="assets/icons/car-logo-1.png" alt="..." loading="lazy">
+                </div>
+                <div class="card-body">
+                  <p class="card-text">VolksWagon</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 col-sm-12 mt-4">
+              <div class="card logo-card  d-flex justify-content-center align-items-center">
+                <div class="logo-box">
+                  <img src="assets/icons/car-logo-9.png" alt="..." loading="lazy">
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Bmw</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-lg-2 col-md-6 col-sm-12 mt-4">
+              <div class="card logo-card d-flex justify-content-center align-items-center">
+                <div class="logo-box">
+                  <img src="assets/icons/car-logo-2.png" alt="..." loading="lazy">
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Hyundai</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-lg-2 col-md-6 col-sm-12 mt-4">
+              <div class="card logo-card  d-flex justify-content-center align-items-center">
+                <div class="logo-box">
+                  <img src="assets/icons/car-logo-3.png" alt="..." loading="lazy">
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Honda</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 col-sm-12 mt-4">
+              <div class="card logo-card  d-flex justify-content-center align-items-center">
+                <div class="logo-box">
+                  <img src="assets/icons/car-logo-4.png" alt="..." loading="lazy">
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Volvo</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 col-sm-12 mt-4">
+              <div class="card logo-card d-flex justify-content-center align-items-center">
+                <div class="logo-box">
+                  <img src="assets/icons/car-logo-5.png" alt="..." loading="lazy">
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Nissan</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 col-sm-12 mt-4">
+              <div class="card logo-card d-flex justify-content-center align-items-center">
+                <div class="logo-box">
+                  <img src="assets/icons/car-logo-6.png" alt="..." loading="lazy">
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Suzuki</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 col-sm-12 mt-4">
+              <div class="card logo-card d-flex justify-content-center align-items-center">
+                <div class="logo-box">
+                  <img src="assets/icons/car-logo-7.png" alt="..." loading="lazy">
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Porche</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 col-sm-12 mt-4">
+              <div class="card logo-card  d-flex justify-content-center align-items-center">
+                <div class="logo-box">
+                  <img src="assets/icons/car-logo-8.png" alt="..." loading="lazy">
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Mazada</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 col-sm-12 mt-4">
+              <div class="card logo-card  d-flex justify-content-center align-items-center">
+                <div class="logo-box">
+                  <img src="assets/icons/car-logo-10.png" alt="..." loading="lazy">
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Ford</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-lg-2 col-md-6 col-sm-12 mt-4">
+              <div class="card logo-card  d-flex justify-content-center align-items-center">
+                <div class="logo-box">
+                  <img src="assets/icons/car-logo-11.png" alt="..." loading="lazy">
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Mini Cooper</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 col-sm-12 mt-4">
+              <div class="card logo-card d-flex justify-content-center align-items-center">
+                <div class="logo-box">
+                  <img src="assets/icons/car-logo-12.png" class="img-fluid" alt="..." loading="lazy">
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Mercedes</p>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container-fluid mt-3">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="image-container">
+            <div class="text-box-container">
+              <div class="row danger d-flex justify-content-center align-items-center">
+                <div class="col-lg-3 d-flex align-items-center gap-2">
+                  <div class="icon-box">
+                  <img src="assets/svg/car-svgrepo-com.svg" alt="" height="90px" width="90px">
+                  </div>
+                  <div class="icon-text">
+                    <h3 class="fw-bolder" style="color:#FF9900;">2900+</h3>
+                    <p class="fs-4 fw-bold">New Cars In Stock</p>
+                  </div>
+                </div>
+                <div class="col-lg-3 d-flex align-items-center gap-2">
+                  <div class="icon-box">
+                    <img src="assets/svg/man-with-car-and-suitcase-svgrepo-com.svg" alt="" height="90px" width="90px">
+                  </div>
+                  <div class="icon-text">
+                    <h3 class="fw-bolder" style="color:#FF9900;">3400+</h3>
+                    <p class="fs-4 fw-bold">USED CARS IN STOCK</p>
+                  </div>
+                </div>
+                <div class="col-lg-3 d-flex align-items-center gap-2">
+                  <div class="icon-box">
+                    <img src="assets/svg/setting-svgrepo-com.svg" alt="" height="90px" width="90px">
+                  </div>
+                  <div class="icon-text">
+                    <h3 class="fw-bolder" style="color:#FF9900;">1200+</h3>
+                    <p class="fs-4 fw-bold">Service Centers</p>
+                  </div>
+                </div>
+                <div class="col-lg-3 d-flex align-items-center gap-2">
+                  <div class="icon-box">
+                    <img src="assets/svg/rocket-svgrepo-com.svg" alt="" height="90px" width="90px">
+                  </div>
+                  <div class="icon-text">
+                    <h3 class="fw-bolder" style="color:#FF9900;">34k</h3>
+                    <p class="fs-4 fw-bold">Happy Clients</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid testimonial-container rounded">
+      <h2 class="tag fs-2 fw-bolder" style="color:#FF9900;">Our customers love</h2>
+      <h2 class="text-primary text-center head">What we do</h2>
+      <div class="owl-carousel owl-theme">
+        <div class="owl-item">
+          <div class="card owl-card d-flex flex-column">
+            <div class="mt-2">
+              <span class="fas fa-star active-star"></span>
+              <span class="fas fa-star active-star"></span>
+              <span class="fas fa-star active-star"></span>
+              <span class="fas fa-star active-star"></span>
+              <span class="fas fa-star-half-alt active-star"></span>
+            </div>
+            <div class="main font-weight-bold pb-2 pt-1">Great Service</div>
+            <div class="testimonial">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni dolores molestias veniam inventore itaque
+              eius iure omnis, temporibus culpa id.
+            </div>
+            <div class="d-flex flex-row profile pt-4 mt-auto">
+              <img
+                src="https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                alt="" class="rounded-circle">
+              <div class="d-flex flex-column pl-2">
+                <div class="name">Megan</div>
+                <p class="text-muted designation">CEO of My Company</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Repeat the owl-item structure as needed -->
+
+      </div>
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer id="footer" class="clearfix bg-footer2 pd-t81 re-hi mt-4">
+      <div class="footer-container">
+        <div class="row footer-top">
+          <div class="col-lg-6 col-md-12 col-12 pd-r80 ">
+            <h2 class="title-footer-top">Do you Have <span class="red-title">something</span> to sell
+              through us?</h2>
+
+          </div>
+          <div class="col-lg-6 col-md-12 col-12 t-al-right pt-20 d-flex justify-content-end align-items-center">
+            <a href="#" class="btn-sell">Sell your car today</a>
+          </div>
+        </div>
+        <div class="row footer-main">
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="widget widget-info">
+              <div class="d-flex align-items-center">
+                <img src="assets/icons/logo.png" alt="" height="80px" width="100px" loading="lazy">
+                <h2 class="text-white fw-900">Car Listing</h2>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis dolores fuga delequae vitae? Quae
+                quos eveniet delectus, ut nostrum doloremque nobis esse!</p>
+              <ul>
+                <li>
+                  <i class="icon-Vector1"></i>
+                  <p>14 New Delhi , India</p>
+                </li>
+                <li>
+                  <i class="icon-Group-1"></i>
+                  <p>needhelp@company.com</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="widget widget-menu pl-60">
+              <h3>Quick Links</h3>
+              <ul class="box-menu">
+                <li><a href="#">Dealer Locator</a></li>
+                <li><a href="#">Service Locator</a></li>
+                <li><a href="#">Pre-owned</a></li>
+                <li><a href="#">Accessori Orignal</a></li>
+                <li><a href="#">Spare Parts</a></li>
+                <li><a href="#"> Services</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="widget widget-menu pl-30">
+              <h3>Research</h3>
+              <ul class="box-menu">
+                <li><a href="#">Build & Price A Vehicle</a></li>
+                <li><a href="#">Compare Models</a></li>
+                <li><a href="#"> Warranty</a></li>
+                <li><a href="#">Download a Brochure</a></li>
+                <li><a href="#">Sign-Up for Updates</a></li>
+                <li><a href="#">Mail Me a Brochure</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12">
+            <div class="widget widget-menu widget-form">
+              <h3>Newsletter</h3>
+              <form method="post" class="email-footer-form form-submit" action="#" accept-charset="utf-8">
+                <div class="text-wrap clearfix d-flex align-items-center gap-4">
+                  <fieldset class="email-wrap style-text">
+                    <input type="email" class="tb-my-input" name="email" placeholder="Enter Email Adress" required="">
+                  </fieldset>
+                  <button name="submit" type="submit" class="btn-submit-email">
+                    <i class="fa-regular fa-paper-plane"></i>
+                  </button>
+                </div>
+                <div class="tfad-listing-feature">
+                  <div class="radio">
+                    <input id="front" type="checkbox" name="check" value="check">
+                    <label for="front" class="fs-6" style="color:#d9cfcf;">I agree to all your terms and
+                      policies</label>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row footer-bottom">
+          <div class="col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4">
+            <p class="coppy-right">Made with ❤️ by <a href="#" class="text-decoration-none">Web-Studio</a></p>
+          </div>
+          <div class="col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-4">
+            <ul class="social-icon">
+              <li>
+                <a href="#"><i class="icon-6"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="icon-4"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="icon-5"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="icon-7"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-12 col-lg-12 col-xl-4 col-xxl-4">
+            <ul class="bottom-bar-menu">
+              <li><a href="#">Privacy & Policy</a></li>
+              <li><a href="#">Licensing</a></li>
+              <li><a href="#">Instruction</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </footer><!-- /#footer -->
+
+
+
+  </main>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js" defer></script>
+  <script src="js/script.js" defer></script>
+</body>
+
+</html>
